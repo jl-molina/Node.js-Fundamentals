@@ -32,7 +32,8 @@ request('./config.txt')
     .then(data => toNumber(data))
     .then(multiply)
     .then(print)
-    .catch(catchAndPrint);
+    .catch(catchAndPrint)
+    .finally(() => console.log('Se acaba la petición'));
 request('./config1.txt')
     .then(data => toNumber(data))
     .then(multiply)
